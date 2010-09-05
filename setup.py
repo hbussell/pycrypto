@@ -258,7 +258,7 @@ kw = {'name':"pycrypto",
                   "Crypto.SelfTest.Random.OSRNG",
                   "Crypto.SelfTest.Util",
                   "Crypto.Protocol", "Crypto.PublicKey"],
-      'package_dir' : { "Crypto": "lib/Crypto" },
+      'package_dir' : { "Crypto": os.path.join(os.path.dirname(__file__), "lib/Crypto") },
       'ext_modules': plat_ext + [
             # _fastmath (uses GNU mp library)
             Extension("Crypto.PublicKey._fastmath",
